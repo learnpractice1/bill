@@ -5,24 +5,28 @@ const Add_product = () => {
   const [product, setProduct] = useState('');
   const [price, setPrice] = useState('');
 
-  const handleSubmit = async (event) => {
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+
+  //   try {
+  //     const response = await fetch('https://your-backend-api.com/endpoint', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ product, price }),
+  //     });
+
+  //     const data = await response.json();
+  //     console.log('Success:', data);
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //   }
+  // };
+  const handleSubmit =()=>{
     event.preventDefault();
-
-    try {
-      const response = await fetch('https://your-backend-api.com/endpoint', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ product, price }),
-      });
-
-      const data = await response.json();
-      console.log('Success:', data);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+    console.log(product,price);
+  }
 
   return (
     <div className='flex justify-center items-center w-full'>
